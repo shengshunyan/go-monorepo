@@ -1,4 +1,8 @@
 github.com/shengshunyan/go-monorepo/packagea v0.0.0-20260129022239-a56439ba4d0d h1:sJtoc0tYcpX44KsFWTqx4y2QZmbTW+NvpYWQX356ejY=
 github.com/shengshunyan/go-monorepo/packagea v0.0.0-20260129022239-a56439ba4d0d/go.mod h1:n12jfvu5OFw4iJc59dyNDIB8/qfjumc6XIJJl5sjAbU=
+github.com/shengshunyan/go-monorepo/packagea v1.0.0 h1:f2qvcsiIVcTusS0pImIwoCnXntlXsd8ociDbNWsLrM8=
+github.com/shengshunyan/go-monorepo/packagea v1.0.0/go.mod h1:uXh0dXM5riH9zegfWI+vuqKxkpvKu5S1wMubSO03Hto=
 github.com/shengshunyan/go-monorepo/packagecommon v0.0.0-20260129034118-9df1570c4109 h1:dQ7M7HefKe7fh3YyRt9j9ewN/bqjh7BuSi0TtayxwbI=
 github.com/shengshunyan/go-monorepo/packagecommon v0.0.0-20260129034118-9df1570c4109/go.mod h1:DsZMKqIU9AmnhMpoRS3SvjWTR+vxjafSmuF+XaaUHCk=
+github.com/shengshunyan/go-monorepo/packagecommon v1.0.0 h1:zaNReNNNdqTytk2mKUMisddyKxYbxbr5ilrPLweWMYQ=
+github.com/shengshunyan/go-monorepo/packagecommon v1.0.0/go.mod h1:DsZMKqIU9AmnhMpoRS3SvjWTR+vxjafSmuF+XaaUHCk=
