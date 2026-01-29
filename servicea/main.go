@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/shengshunyan/go-monorepo/packagea"
-)
+import "github.com/shengshunyan/go-monorepo/packagea"
 
 func main() {
 	packagea.Common()
