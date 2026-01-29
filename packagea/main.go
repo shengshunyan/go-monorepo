@@ -1,5 +1,8 @@
 package packagea
 
+import "github.com/shengshunyan/go-monorepo/packagecommon"
+
 func Common() {
-	println("This is package a !!! b")
+	packagecommon.Common()
+	println("This is package a")
 }
