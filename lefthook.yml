@@ -1,0 +1,44 @@
+colors: false
+pre-commit:
+    parallel: true
+    commands:
+        format:
+            run: gusky plugin run format --hook pre-commit -- {staged_files}
+            glob: '*.go'
+            fail_text: 格式化失败
+        lint:
+            run: gusky plugin run lint --hook pre-commit -- {staged_files}
+            glob: '*.go'
+            fail_text: |-
+                ❗ 代码不符合架构 slint 规范，请修复后再提交。
+
+                * 获取最新规范配置文件：
+                   https://git.inshopline.com/opensource/sl-public/go-gitlab-ci-template/-/raw/v1.0.3/.golangci2.yml
+
+                * 详细规范文档和说明：
+                   https://reurl.cc/nY7EzX
+
+                * 故障排查指南：
+                   https://shopline.gitio.inshopline.com/center-2/frontend/go-bff/gusky/guide/troubleshooting.html#_3-slint-%E6%A3%80%E6%9F%A5%E5%A4%B1%E8%B4%A5
+
+                * 联系方式：
+                   规范问题：@张辉 (zhanghui5@shopline.com)
+                   gusky 问题：@邓泽丰 (zephyr@shopline.com)
+
+                * 快速修复：
+                1. 检查具体的 lint 错误信息（当前基于增量检查）
+                2. 参考规范文档进行代码调整
+                3. 本地验证：
+                   • 增量检查：slint run --config $HOME/.gusky/temp/golangci.yml
+                   • 全量检查：slint run ./... --config $HOME/.gusky/temp/golangci.yml
+            stage_fixed: true
+commit-msg:
+    parallel: true
+    commands:
+        commitlint:
+            run: gusky plugin run commitlint --hook commit-msg -- {1}
+            fail_text: |-
+                提交信息不符合 Conventional Commits 规范，请参考文档修正后再提交。
+                规范格式：type(scope?): subject
+                示例：feat(api): add new endpoint
+                允许的 type: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert, release, wip
